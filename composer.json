@@ -1,0 +1,33 @@
+{
+    "name": "sanad-ai/sanad-ai",
+    "description": "Sanad AI - WhatsApp and ERP platform",
+    "type": "project",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Syrine BEN ANAYA"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "vlucas/phpdotenv": "^5.7",
+        "php": ">=8.2",
+        "ext-pdo": "*",
+        "ext-mbstring": "*",
+        "ext-fileinfo": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "SanadAi\\": "app/",
+            "SanadAi\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "scripts": {
+        "migrate": "php scripts/migrate.php",
+        "seed": "php scripts/seed.php",
+        "seed:demo": "php scripts/seed.php --demo",
+        "seed:demo-login": "php scripts/seed_demo.php",
+        "test": "php tests/run.php",
+        "serve": "php -S 127.0.0.1:8080 -t public router.php"
+    }
+}

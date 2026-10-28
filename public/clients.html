@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#176b5b">
+  <title>Sanad AI</title>
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/app.css">
+  <script>
+    // Apply saved theme / language before first paint (avoids a flash).
+    try {
+      var l = localStorage.getItem('sanad.lang') === 'en' ? 'en' : 'ar';
+      document.documentElement.lang = l;
+      document.documentElement.dir = l === 'ar' ? 'rtl' : 'ltr';
+      var th = localStorage.getItem('sanad.theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.dataset.theme = th;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <div id="app"></div>
+  <noscript><p style="padding:2rem">JavaScript is required.</p></noscript>
+  <script type="module" src="js/pages/clients.js"></script>
+</body>
+</html>

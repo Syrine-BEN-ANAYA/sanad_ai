@@ -1,0 +1,11 @@
+/vendor/
+/node_modules/
+/.env
+/.env.*
+!.env.example
+/storage/logs/*
+/storage/cache/*
+/storage/uploads/*
+!.gitkeep
+dump.rdb
+cookies.txt
